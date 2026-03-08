@@ -1,5 +1,36 @@
 # Entra-ID-IAM-Lab
 
+<details>
+  <summary>📸 Click to view Entra ID Configuration Screenshots</summary>
+  
+  ### Group Based Access Control Setup
+  <img width="753" height="443" alt="Security Groups" src="https://github.com/user-attachments/assets/3cd41b20-5903-4ce7-8e25-1b6303047d8e" />
+
+  
+  ### User Identity Management
+  <img width="739" height="617" alt="Users created" src="https://github.com/user-attachments/assets/10ede5ad-03d8-42bb-812f-759802c5ea72" />
+
+
+  ### Role-Based Access Control
+  <img width="621" height="380" alt="Help Desk-assignment" src="https://github.com/user-attachments/assets/d2073e3a-a096-4531-b0c8-1a66166bca1c" />
+
+
+  ### Enterprise Users
+  <img width="1007" height="508" alt="Enterprise Users" src="https://github.com/user-attachments/assets/5586616d-5ed5-415c-a5b4-d4156ad19718" />
+
+  ### Enterprise Applications
+  <img width="1079" height="423" alt="Enterprise app- AWS" src="https://github.com/user-attachments/assets/a9fdd488-bfe2-4d7c-90f0-71ee4bba7b9f" />
+
+
+  ### Monitoring & Audit Logs
+  <img width="753" height="580" alt="Monitor Logs" src="https://github.com/user-attachments/assets/b14986a6-1e96-4e18-8bb2-2785c54611fb" />
+
+  <img width="698" height="701" alt="Failed Login- Logs" src="https://github.com/user-attachments/assets/03dcd993-80be-478d-a082-6f2a70fcf304" />
+
+</details>
+
+
+
 📌 Project Overview
 
 This lab demonstrates the implementation of Identity and Access Management (IAM) controls using Microsoft Entra ID. The project simulates how an organization can securely manage user identities, enforce access controls, and monitor authentication activity using identity governance best practices.
