@@ -1,122 +1,91 @@
-# Microsoft Entra ID: Identity and Access Management Lab
+# SAML Single Sign-On Lab with Microsoft Entra ID
+
+<p>
+  <img src="https://img.shields.io/badge/Microsoft_Entra_ID-0078D4?style=for-the-badge" alt="Microsoft Entra ID" />
+  <img src="https://img.shields.io/badge/SAML_2.0-3076BE?style=for-the-badge" alt="SAML 2.0" />
+  <img src="https://img.shields.io/badge/Single_Sign--On-0078D4?style=for-the-badge" alt="Single Sign-On" />
+  <img src="https://img.shields.io/badge/Claims_Mapping-5089F7?style=for-the-badge" alt="Claims Mapping" />
+  <img src="https://img.shields.io/badge/Access_Control-111827?style=for-the-badge" alt="Access Control" />
+</p>
 
 ## Overview
 
-This lab simulates a small organization's identity environment using Microsoft Entra ID. It covers user administration, departmental security groups, role-based access control, baseline security settings, enterprise application assignments, and log review.
+This lab explores SAML-based Single Sign-On (SSO) configuration for a custom enterprise application in Microsoft Entra ID.
 
-## Business Scenario
+The work covers application creation, SAML settings, attribute mapping, user assignment, and authentication testing.
 
-An organization with Human Resources, IT, and Finance departments needs to manage employee access while limiting administrative privileges.
+## Lab Objectives
 
-The lab focuses on:
+- Configure an enterprise application for SAML authentication.
+- Define the application identifier and reply URL.
+- Configure the attributes sent to the application.
+- Assign users to the application.
+- Test the authentication flow.
 
-- Organizing users by department.
-- Managing access through security groups.
-- Assigning administrative roles according to least privilege.
-- Configuring baseline authentication protections.
-- Reviewing sign-in activity and administrative changes.
+## Configuration Steps
 
-## Environment
+### 1. Enterprise Application Creation
 
-| Component | Purpose |
+Created a custom enterprise application in Microsoft Entra ID and selected SAML as the sign-on method.
+
+### 2. Basic SAML Configuration
+
+Configured the application’s SAML settings:
+
+| Setting | Purpose |
 | --- | --- |
-| Microsoft Entra ID | Identity and access administration |
-| Test user accounts | Simulated employees across three departments |
-| Security groups | Departmental access management |
-| Built-in directory roles | Administrative access control |
-| Enterprise application | Application access assignment |
-| Sign-in and audit logs | Authentication and change review |
+| Identifier (Entity ID) | Identifies the service provider |
+| Reply URL (Assertion Consumer Service URL) | Specifies where Entra ID sends the SAML response |
 
-## Configuration
+### 3. Attribute Mapping
 
-### 1. User Administration
+Configured user attributes and claims to provide identity information to the application.
 
-Created test user accounts representing employees in Human Resources, IT, and Finance.
+### 4. User Assignment
 
-### 2. Group-Based Access Management
+Assigned test users to the enterprise application to manage access.
 
-Created departmental security groups and added the appropriate users.
+### 5. Authentication Testing
 
-| Security Group | Department |
-| --- | --- |
-| HR-Group | Human Resources |
-| IT-Group | Information Technology |
-| Finance-Group | Finance |
+Tested the authentication flow to evaluate the configuration.
 
-Group membership provides a central way to manage departmental application assignments.
-
-### 3. Role-Based Access Control
-
-Assigned built-in Microsoft Entra ID administrative roles, including Helpdesk Administrator, to support specific responsibilities.
-
-The configuration demonstrates using a role appropriate to the task rather than granting broad administrative access.
-
-### 4. Baseline Identity Security
-
-Enabled Security Defaults as the tenant's baseline identity protection.
-
-This setting provides Microsoft-managed protections for MFA registration, MFA requirements, and blocking legacy authentication.
-
-### 5. Enterprise Application Access
-
-Configured an enterprise application and used group-based assignments to organize access.
-
-This portion of the lab focuses on application assignment. An assignment alone does not demonstrate a completed SSO integration.
-
-### 6. Sign-In and Audit Log Review
-
-Reviewed sign-in logs and audit logs to examine authentication activity and directory changes.
-
-The screenshots include a failed sign-in event, demonstrating how logs can support access troubleshooting. A failed sign-in alone does not establish malicious activity.
+The screenshots below document configuration and user assignment. A successful end-to-end sign-in is not documented here.
 
 ## Skills Demonstrated
 
-- Microsoft Entra ID user and group administration
-- Group-based application assignment
-- Built-in administrative role assignment
-- Least privilege access configuration
-- Security Defaults configuration
-- Sign-in and audit log review
-- IAM documentation
+- Microsoft Entra ID enterprise application administration
+- SAML-based SSO configuration
+- Application identifiers and reply URLs
+- User attribute and claim mapping
+- Application access assignment
+- Authentication testing
 
 ## Key Takeaways
 
-This lab helped me understand how user accounts, security groups, administrative roles, application assignments, and authentication protections work together.
+This lab helped me understand how application identifiers, reply URLs, user claims, and access assignments support SAML authentication.
 
-It also reinforced the importance of reviewing logs and distinguishing between a configured control and a verified outcome.
+It also reinforced the importance of validating the complete sign-in flow before considering an SSO integration complete.
 
 ## Configuration Screenshots
 
 <details>
-<summary>View lab screenshots</summary>
+<summary>View SAML SSO configuration screenshots</summary>
 
-### Departmental Security Groups
+### Enterprise Application Creation
 
-<img width="753" alt="Departmental security groups in Microsoft Entra ID" src="https://github.com/user-attachments/assets/3cd41b20-5903-4ce7-8e25-1b6303047d8e" />
+<img width="908" alt="Custom enterprise application in Microsoft Entra ID" src="https://github.com/user-attachments/assets/fc45b90f-f53c-45f4-99c9-2c0393904c76" />
 
-### Test User Accounts
+### Identifier and Reply URL
 
-<img width="739" alt="Test user accounts created in Microsoft Entra ID" src="https://github.com/user-attachments/assets/10ede5ad-03d8-42bb-812f-759802c5ea72" />
+<img width="920" alt="SAML identifier and reply URL settings" src="https://github.com/user-attachments/assets/5fa883b3-be29-4d65-b5fa-1ac3bbc68bd0" />
 
-### Helpdesk Administrator Role Assignment
+### SAML Configuration
 
-<img width="621" alt="Helpdesk Administrator role assignment" src="https://github.com/user-attachments/assets/d2073e3a-a096-4531-b0c8-1a66166bca1c" />
+<img width="939" alt="Enterprise application SAML configuration" src="https://github.com/user-attachments/assets/7448ebbe-8099-4995-b045-7647aca42170" />
 
-### Enterprise Application Users
+### User Assignment
 
-<img width="1007" alt="Users assigned to the enterprise application" src="https://github.com/user-attachments/assets/5586616d-5ed5-415c-a5b4-d4156ad19718" />
-
-### Enterprise Application Configuration
-
-<img width="1079" alt="AWS enterprise application configuration" src="https://github.com/user-attachments/assets/a9fdd488-bfe2-4d7c-90f0-71ee4bba7b9f" />
-
-### Log Review
-
-<img width="753" alt="Microsoft Entra ID monitoring logs" src="https://github.com/user-attachments/assets/b14986a6-1e96-4e18-8bb2-2785c54611fb" />
-
-### Failed Sign-In Event
-
-<img width="698" alt="Failed sign-in event details" src="https://github.com/user-attachments/assets/03dcd993-80be-478d-a082-6f2a70fcf304" />
+<img width="946" alt="Test users assigned to the enterprise application" src="https://github.com/user-attachments/assets/8d3fcb87-0c81-4a49-9f4c-eabf94c9fc7e" />
 
 </details>
 Proper IAM implementation is essential for reducing security risk and maintaining strong governance across enterprise environments.
